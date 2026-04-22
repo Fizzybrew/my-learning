@@ -30,7 +30,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-(family-name:--font-geist-sans) bg-linear-to-b from-white to-slate-100 dark:from-black dark:to-slate-950 text-slate-900 dark:text-white">
-        {/* Dynamic Island шапка */}
+
         <header
           className="
           fixed top-0 left-0 right-0 z-50 
@@ -43,27 +43,29 @@ export default function RootLayout({
         >
           <div className="container mx-auto flex justify-between items-center">
             <div className="font-bold text-xl flex">
-              <p className="text-slate-900 dark:text-white">
+              <Link                
+                href="/"
+                className="text-slate-900 dark:text-white">
                 FIZZY
                 <span className="text-sm text-slate-500 dark:text-slate-400">
                   .ru
                 </span>
-              </p>
+              </Link>
             </div>
 
             <nav className="flex items-center gap-4">
               <Link
-                href="/"
+                href="/courses"
                 className="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
               >
                 Программа
               </Link>
-              <Link
-                href="/about"
-                className="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+              <button
+                type="button"
+                className="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors cursor-pointer"
               >
                 <i className="fi fi-rr-menu-burger text-2xl flex items-center"></i>
-              </Link>
+              </button>
             </nav>
           </div>
         </header>
